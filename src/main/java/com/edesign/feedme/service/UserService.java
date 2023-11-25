@@ -18,8 +18,8 @@ public class UserService {
 	@Autowired
 	UserRepository userRepository;
 	
-	// Get all Useres
-	public Page<User> getUseres(int page, int size, String sort, String sortOrder) {
+	// Get all Users
+	public Page<User> getUsers(int page, int size, String sort, String sortOrder) {
 		Sort.Direction direction = sortOrder.equalsIgnoreCase("ASC") ? Sort.Direction.ASC : Sort.Direction.DESC;
 		Sort sortBy = Sort.by(direction,sort);
 		Pageable pageable = PageRequest.of(page, size, sortBy);
@@ -28,8 +28,8 @@ public class UserService {
 	
 	
 	// Get one User by UserId
-	public User getUser(int categoryId) {
-		return userRepository.findById(categoryId).get();
+	public User getUser(int userId) {
+		return userRepository.findById(userId).get();
 	}
 	
 	// Add User
@@ -41,7 +41,7 @@ public class UserService {
 	}
 	
 	// Update User
-	public User updateCategory(User user) {
+	public User updateUser(User user) {
 		if(user.getUserId() <=0 )
 			throw new BadRequestException("UserId cannot be null or empty.");
 		if(userRepository.existsById(user.getUserId()))

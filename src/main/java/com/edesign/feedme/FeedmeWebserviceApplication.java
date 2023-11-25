@@ -1,7 +1,8 @@
 package com.edesign.feedme;
 
-//todo
-//Order, OrderItem, ... Payment, Shipment..., Wishlist... 
+// todo 
+// Extra-Code for Admin and User Controller (decrypt etc.)
+// Order, OrderItem, ... Payment, Shipment..., Wishlist... 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

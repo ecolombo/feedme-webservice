@@ -19,7 +19,7 @@ public class RestaurantCategoryService {
 	RestaurantCategoryRepository restaurantCategoryRepository;
 	
 	// Get all Categories
-	public Page<RestaurantCategory> getCategories(int page, int size, String sort, String sortOrder) {
+	public Page<RestaurantCategory> getRestaurantCategories(int page, int size, String sort, String sortOrder) {
 		Sort.Direction direction = sortOrder.equalsIgnoreCase("ASC") ? Sort.Direction.ASC : Sort.Direction.DESC;
 		Sort sortBy = Sort.by(direction,sort);
 		Pageable pageable = PageRequest.of(page, size, sortBy);
@@ -28,12 +28,12 @@ public class RestaurantCategoryService {
 	
 	
 	// Get one Category by CategoryId
-	public RestaurantCategory getCategory(int restaurantCategoryId) {
+	public RestaurantCategory getRestaurantCategory(int restaurantCategoryId) {
 		return restaurantCategoryRepository.findById(restaurantCategoryId).get();
 	}
 	
 	// Add Category
-	public RestaurantCategory addCategory(RestaurantCategory restaurantCategory) {
+	public RestaurantCategory addRestaurantCategory(RestaurantCategory restaurantCategory) {
 		System.out.println("[RestaurantCategoryService.addCategory] Trying to create category with name:"+restaurantCategory.getName());
 		if(restaurantCategoryRepository.existsByName(restaurantCategory.getName()))
 			throw new BadRequestException("Category with this name already exists.");
@@ -41,7 +41,7 @@ public class RestaurantCategoryService {
 	}
 	
 	// Update Category
-	public RestaurantCategory updateCategory(RestaurantCategory restaurantCategory) {
+	public RestaurantCategory updateRestaurantCategory(RestaurantCategory restaurantCategory) {
 		if(restaurantCategory.getRestaurantCategoryId() <=0 )
 			throw new BadRequestException("CategoryId cannot be null or empty.");
 		if(restaurantCategoryRepository.existsById(restaurantCategory.getRestaurantCategoryId()))

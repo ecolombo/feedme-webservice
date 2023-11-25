@@ -28,8 +28,8 @@ public class DishService {
 	
 	
 	// Get one Dish by DishId
-	public Dish getDish(int categoryId) {
-		return dishRepository.findById(categoryId).get();
+	public Dish getDish(int dishId) {
+		return dishRepository.findById(dishId).get();
 	}
 	
 	// Add Dish
@@ -41,7 +41,7 @@ public class DishService {
 	}
 	
 	// Update Dish
-	public Dish updateCategory(Dish dish) {
+	public Dish updateDish(Dish dish) {
 		if(dish.getDishId() <=0 )
 			throw new BadRequestException("DishId cannot be null or empty.");
 		if(dishRepository.existsById(dish.getDishId()))

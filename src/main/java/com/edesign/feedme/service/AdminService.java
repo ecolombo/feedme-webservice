@@ -19,7 +19,7 @@ public class AdminService {
 	AdminRepository adminRepository;
 	
 	// Get all Admines
-	public Page<Admin> getAdmines(int page, int size, String sort, String sortOrder) {
+	public Page<Admin> getAdmins(int page, int size, String sort, String sortOrder) {
 		Sort.Direction direction = sortOrder.equalsIgnoreCase("ASC") ? Sort.Direction.ASC : Sort.Direction.DESC;
 		Sort sortBy = Sort.by(direction,sort);
 		Pageable pageable = PageRequest.of(page, size, sortBy);
@@ -28,8 +28,8 @@ public class AdminService {
 	
 	
 	// Get one Admin by AdminId
-	public Admin getAdmin(int categoryId) {
-		return adminRepository.findById(categoryId).get();
+	public Admin getAdmin(int adminId) {
+		return adminRepository.findById(adminId).get();
 	}
 	
 	// Add Admin
@@ -41,7 +41,7 @@ public class AdminService {
 	}
 	
 	// Update Admin
-	public Admin updateCategory(Admin admin) {
+	public Admin updateAdmin(Admin admin) {
 		if(admin.getAdminId() <=0 )
 			throw new BadRequestException("AdminId cannot be null or empty.");
 		if(adminRepository.existsById(admin.getAdminId()))
