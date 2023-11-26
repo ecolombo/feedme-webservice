@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "5210b61b-c66a-40a9-86af-9bdce57ec9c7",
+		"name": "RestaurantCategories APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29210091"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Asian",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Asian\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/feedme-webservice/api/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"feedme-webservice",
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Italian",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"luxury\",\r\n    \"pricePerKM\": 8.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/feedme-webservice/api/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"feedme-webservice",
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add French",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"luxury\",\r\n    \"pricePerKM\": 8.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/feedme-webservice/api/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"feedme-webservice",
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"adminId\": 5,\r\n        \"email\": \"admin1@simplilearn.com\",\r\n        \"password\": \"Admin@123\",\r\n        \"fullName\": \"Admistrator\",\r\n        \"loginType\": 1,\r\n        \"addedOn\": \"2023-08-27T17:41:41.981+00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/admins/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/admins/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

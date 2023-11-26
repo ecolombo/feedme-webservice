@@ -36,16 +36,16 @@ public class Dish {
 	private String name;
 	
 	@ElementCollection
-	@CollectionTable(name="dish_images", joinColumns=@JoinColumn(name="dish_id"))
-	
-	// @Column(name="image_url")
-	// private String imgUrl;
+	@CollectionTable(name="dish_images", joinColumns=@JoinColumn(name="dish_id"))	
+	@Column(name="image_url")
+	private List<String> imageUrls = new ArrayList<>();
 
-	@Column(name="thumbnail_image")
-	private int thumbnailImage;
+	// Braucht man?
+	// @Column(name="thumbnail_image")
+	// private int thumbnailImage;
 	
 	@Column(name="dish_price")
-	private int price;
+	private double price;
 	
 	@Column(name="addedOn")
 	private Date addedOn = new Date();

@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "812e2a19-2e4a-4f63-83d9-29c40a8e0d74",
+		"name": "Restaurant APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29210091"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Da Francesco",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Da Francesco\",\r\n    \"email\":\"gigi.p@cinema.it\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/feedme-webservice/api/restaurants",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"feedme-webservice",
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Bangkok",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Da Francesco\",\r\n    \"email\":\"gigi.p@cinema.it\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/feedme-webservice/api/restaurants",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"feedme-webservice",
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Bocuse One",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Da Francesco\",\r\n    \"email\":\"gigi.p@cinema.it\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/feedme-webservice/api/restaurants",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"feedme-webservice",
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"adminId\": 5,\r\n        \"email\": \"admin1@simplilearn.com\",\r\n        \"password\": \"Admin@123\",\r\n        \"fullName\": \"Admistrator\",\r\n        \"loginType\": 1,\r\n        \"addedOn\": \"2023-08-27T17:41:41.981+00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/admins/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/admins/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"admins",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -34,8 +34,10 @@ public class UserController {
 			@RequestParam(defaultValue = "userId") String sort, @RequestParam(defaultValue = "ASC") String sortOrder){		
 		Page<User> paginatedResults = userService.getUsers(page, size, sort, sortOrder);
 		// todo: add response when no data found
-		ResponseDto response = new ResponseDto("Users found", new Date(), HttpStatus.OK.name(), paginatedResults); 	
-		return response;
+		if (paginatedResults.getNumberOfElements() > 0)
+			return new ResponseDto("Users found", new Date(), HttpStatus.OK.name(), paginatedResults);
+		else
+			return new ResponseDto("No users found", new Date(), HttpStatus.NOT_FOUND.name(), paginatedResults);
 	}
 	
 	
