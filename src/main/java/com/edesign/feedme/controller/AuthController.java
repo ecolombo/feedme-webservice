@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import com.edesign.feedme.dto.AuthResponseDto;
 import com.edesign.feedme.entity.Admin;
 import com.edesign.feedme.entity.User;
 
+
 @RestController
 public class AuthController {
 	
@@ -25,6 +27,7 @@ public class AuthController {
 	@Autowired
 	UserService userService;
 	
+	//@CrossOrigin(origins="*", maxAge=3600) 
 	@PostMapping("/admins/login")
 	public ResponseDto adminLogin(@RequestBody LoginRequestDto login) {
 		Admin admin = adminService.validateLogin(login);
