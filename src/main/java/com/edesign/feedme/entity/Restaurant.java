@@ -2,6 +2,7 @@ package com.edesign.feedme.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import java.util.Date;
 
 import jakarta.persistence.CollectionTable;
@@ -40,5 +41,9 @@ public class Restaurant {
 	
 	@Column(name="addedOn")
 	private Date addedOn = new Date();
+	
+	@jakarta.persistence.ManyToOne
+	@JoinColumn(name = "restaurantCategory_id")
+	private RestaurantCategory restaurantCategory;
 
 }
