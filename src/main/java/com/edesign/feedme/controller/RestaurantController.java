@@ -72,6 +72,7 @@ public class RestaurantController {
 	@PutMapping("/restaurants")
 	public ResponseDto updateRestaurant(@RequestBody Restaurant restaurant){
 		// todo: add response if update not possible
+		System.out.println("Updated Restaurant values: " + restaurant);
 		Restaurant resultRestaurant = restaurantService.updateRestaurant(restaurant);
 		ResponseDto response = new ResponseDto("Restaurant updated", new Date(), HttpStatus.OK.name(), resultRestaurant);
 		return response;
