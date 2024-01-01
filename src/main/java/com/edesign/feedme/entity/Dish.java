@@ -11,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Entity;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
@@ -35,14 +36,11 @@ public class Dish {
 	@Column(name="name")
 	private String name;
 	
-	@ElementCollection
-	@CollectionTable(name="dish_images", joinColumns=@JoinColumn(name="dish_id"))	
-	@Column(name="image_url")
-	private List<String> imageUrls = new ArrayList<>();
+	@Column(name="description")
+	private String description;
 
-	// Braucht man?
-	// @Column(name="thumbnail_image")
-	// private int thumbnailImage;
+	@Column(name="imageURL")
+	private String imageURL;
 	
 	@Column(name="dish_price")
 	private double price;
@@ -51,5 +49,9 @@ public class Dish {
 	private Date addedOn = new Date();
 	
 	// Rating --> Rating_ID
+	
+	@ManyToOne
+	@JoinColumn(name = "restaurant_id")
+	private Restaurant restaurant;	
 
 }
