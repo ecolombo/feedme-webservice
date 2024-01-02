@@ -31,7 +31,7 @@ public class RestaurantController {
 	 */
 	@GetMapping("/restaurants")
 	public ResponseDto getRestaurants(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size, 
-			@RequestParam(defaultValue = "restaurantId") String sort, @RequestParam(defaultValue = "ASC") String sortOrder){		
+			@RequestParam(defaultValue = "restaurantId") String sort, @RequestParam(defaultValue = "ASC") String sortOrder) {		
 		Page<Restaurant> paginatedResults = restaurantService.getRestaurants(page, size, sort, sortOrder);
 		// todo: add response when no data found
 		ResponseDto response = new ResponseDto("Restaurants found", new Date(), HttpStatus.OK.name(), paginatedResults); 	

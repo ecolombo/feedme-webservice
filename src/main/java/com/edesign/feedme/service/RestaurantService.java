@@ -18,7 +18,7 @@ public class RestaurantService {
 	@Autowired
 	RestaurantRepository restaurantRepository;
 	
-	// Get all Restaurantes
+	// Get all Restaurants
 	public Page<Restaurant> getRestaurants(int page, int size, String sort, String sortOrder) {
 		Sort.Direction direction = sortOrder.equalsIgnoreCase("ASC") ? Sort.Direction.ASC : Sort.Direction.DESC;
 		Sort sortBy = Sort.by(direction,sort);
